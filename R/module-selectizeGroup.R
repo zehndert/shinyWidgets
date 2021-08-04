@@ -223,7 +223,7 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
               updateSelectizeInput(
                 session = session,
                 inputId = i,
-                choices = sort(unique(data[[i]])),
+                choices = vals,
                 server = TRUE
               )
             }
@@ -235,7 +235,7 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
             updateSelectizeInput(
               session = session,
               inputId = x,
-              choices = sort(unique(data[[x]])),
+              choices = vals,
               server = TRUE
             )
           }
