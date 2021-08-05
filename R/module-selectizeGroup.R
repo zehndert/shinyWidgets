@@ -160,8 +160,8 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
     lapply(
       X = rv$vars,
       FUN = function(x) {
-        # pre_vals <- unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))
-          vals <- sort(setNames(unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))[,1], unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))[,2]))
+        # pre_vals <- unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))
+          vals <- sort(setNames(unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))[,1], unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))[,2]))
         updateSelectizeInput(
           session = session,
           inputId = x,
@@ -176,8 +176,8 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
     lapply(
       X = rv$vars,
       FUN = function(x) {
-        # pre_vals <- unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))
-          vals <- sort(setNames(unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))[,1], unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_Bezeichnung')]]))[,2]))
+        # pre_vals <- unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))
+          vals <- sort(setNames(unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))[,1], unique(cbind(rv$data[[x]], rv$data[[paste0(x,'_name')]]))[,2]))
         updateSelectizeInput(
           session = session,
           inputId = x,
@@ -218,8 +218,8 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
 
           for (i in ovars) {
             if (is.null(input[[i]])) {
-              # pre_vals <- unique(cbind(data[[i]], data[[paste0(i,'_Bezeichnung')]]))
-                vals <- sort(setNames(unique(cbind(data[[i]], data[[paste0(i,'_Bezeichnung')]]))[,1], unique(cbind(data[[i]], data[[paste0(i,'_Bezeichnung')]]))[,2]))
+              # pre_vals <- unique(cbind(data[[i]], data[[paste0(i,'_name')]]))
+                vals <- sort(setNames(unique(cbind(data[[i]], data[[paste0(i,'_name')]]))[,1], unique(cbind(data[[i]], data[[paste0(i,'_name')]]))[,2]))
               updateSelectizeInput(
                 session = session,
                 inputId = i,
@@ -230,8 +230,8 @@ selectizeGroupServer <- function(input, output, session, data, vars) { # nocov s
           }
 
           if (is.null(input[[x]])) {
-            # pre_vals <- unique(cbind(data[[x]], data[[paste0(x,'_Bezeichnung')]]))
-              vals <- sort(setNames(unique(cbind(data[[x]], data[[paste0(x,'_Bezeichnung')]]))[,1], unique(cbind(data[[x]], data[[paste0(x,'_Bezeichnung')]]))[,2]))
+            # pre_vals <- unique(cbind(data[[x]], data[[paste0(x,'_name')]]))
+              vals <- sort(setNames(unique(cbind(data[[x]], data[[paste0(x,'_name')]]))[,1], unique(cbind(data[[x]], data[[paste0(x,'_name')]]))[,2]))
             updateSelectizeInput(
               session = session,
               inputId = x,
