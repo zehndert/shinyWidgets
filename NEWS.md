@@ -1,4 +1,4 @@
-shinyWidgets_custom 0.1
+shinyWidgetsCustom 0.1
 ======================
 
 * Change choices to named lists (Suffix: _key)
