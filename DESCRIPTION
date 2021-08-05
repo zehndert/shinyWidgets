@@ -1,4 +1,4 @@
-Package: shinyWidgets_custom
+Package: shinyWidgetsCustom
 Title: Custom Inputs Widgets for Shiny
 Version: 0.6.0.9200
 Authors@R: c(
