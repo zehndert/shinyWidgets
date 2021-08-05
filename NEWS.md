@@ -1,3 +1,9 @@
+shinyWidgets_custom 0.1
+======================
+
+* Change choices to named lists (Suffix: _key)
+* Change Package name to shinyWidgets_custom
+
 shinyWidgets 0.6.1
 ======================
 
