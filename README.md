@@ -1,4 +1,4 @@
-# shinyWidgets
+# shinyWidgets_custom
 
 > Extend widgets available in shiny
 
