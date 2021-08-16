@@ -1,4 +1,4 @@
 library(testthat)
-library(shinyWidgets)
+library(shinyWidgetsCustom)
 
-test_check("shinyWidgets")
+test_check("shinyWidgetsCustom")
