@@ -104,10 +104,10 @@ attachShinyWidgetsDep <- function(tag, widget = NULL, extra_deps = NULL) {
 
 html_dependency_shinyWidgets <- function() {
   htmltools::htmlDependency(
-    name = "shinyWidgets",
-    version = packageVersion("shinyWidgets"),
-    src = c(href = "shinyWidgets", file = "assets"),
-    package = "shinyWidgets",
+    name = "shinyWidgetsCustom",
+    version = packageVersion("shinyWidgetsCustom"),
+    src = c(href = "shinyWidgetsCustom", file = "assets"),
+    package = "shinyWidgetsCustom",
     script = "shinyWidgets-bindings.min.js",
     stylesheet = "shinyWidgets.min.css",
     all_files = FALSE
@@ -186,10 +186,10 @@ awesomeDependencyCSS <- function(theme) {
   sass_input <- list(
     sass_vars,
     sass::sass_file(
-      system.file(package = "shinyWidgets", "assets/awesome-bootstrap-checkbox/_mixins.scss")
+      system.file(package = "shinyWidgetsCustom", "assets/awesome-bootstrap-checkbox/_mixins.scss")
     ),
     sass::sass_file(
-      system.file(package = "shinyWidgets", "assets/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss")
+      system.file(package = "shinyWidgetsCustom", "assets/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss")
     )
   )
 
@@ -198,7 +198,7 @@ awesomeDependencyCSS <- function(theme) {
     theme = theme,
     name = "awesome-bootstrap",
     version = "0.3.7",
-    cache_key_extra = packageVersion("shinyWidgets")
+    cache_key_extra = packageVersion("shinyWidgetsCustom")
   )
 }
 
@@ -210,8 +210,8 @@ html_dependency_bttn <- function() {
   htmlDependency(
     name = "bttn",
     version = "0.2.4",
-    src = c(href = "shinyWidgets/bttn", file = "assets/bttn"),
-    package = "shinyWidgets",
+    src = c(href = "shinyWidgetsCustom/bttn", file = "assets/bttn"),
+    package = "shinyWidgetsCustom",
     stylesheet = "bttn.min.css"
   )
 }
@@ -230,8 +230,8 @@ prettyDependencyCSS <- function(theme) {
     return(htmlDependency(
       name = "pretty",
       version = "3.0.3",
-      src = c(href = "shinyWidgets/pretty-checkbox", file = "assets/pretty-checkbox"),
-      package = "shinyWidgets",
+      src = c(href = "shinyWidgetsCustom/pretty-checkbox", file = "assets/pretty-checkbox"),
+      package = "shinyWidgetsCustom",
       stylesheet = "pretty-checkbox.min.css"
     ))
   }
@@ -256,7 +256,7 @@ prettyDependencyCSS <- function(theme) {
   sass_input <- list(
     sass_vars,
     sass::sass_file(
-      system.file(package = "shinyWidgets", "assets/pretty-checkbox/pretty-checkbox.scss")
+      system.file(package = "shinyWidgetsCustom", "assets/pretty-checkbox/pretty-checkbox.scss")
     )
   )
 
@@ -265,7 +265,7 @@ prettyDependencyCSS <- function(theme) {
     theme = theme,
     name = "pretty",
     version = "3.0.3",
-    cache_key_extra = packageVersion("shinyWidgets")
+    cache_key_extra = packageVersion("shinyWidgetsCustom")
   )
 }
 
@@ -277,7 +277,7 @@ html_dependency_bsswitch <- function() {
     name = "bootstrap-switch",
     version = "3.3.4",
     package = "shinyWidgets",
-    src = c(href = "shinyWidgets/bootstrap-switch", file = "assets/bootstrap-switch"),
+    src = c(href = "shinyWidgetsCustom/bootstrap-switch", file = "assets/bootstrap-switch"),
     script = "bootstrap-switch-3.3.4/bootstrap-switch.min.js",
     stylesheet = "bootstrap-switch-3.3.4/bootstrap-switch.min.css"
   )
@@ -300,7 +300,7 @@ html_dependency_sweetalert2 <- function(theme = c("sweetalert2",
   htmlDependency(
     name = "sweetalert2",
     version = "9.17.1",
-    src = c(href="shinyWidgets/sweetalert2", file = "assets/sweetalert2"),
+    src = c(href="shinyWidgetsCustom/sweetalert2", file = "assets/sweetalert2"),
     script = c("js/sweetalert2.min.js", "sweetalert-bindings.js"),
     stylesheet = sprintf("css/%s.min.css", theme)
   )
@@ -315,7 +315,7 @@ html_dependency_picker <- function() {
   htmlDependency(
     name = "bootstrap-select",
     version = "1.13.18",
-    package = "shinyWidgets",
+    package = "shinyWidgetsCustom",
     src = c(href = "shinyWidgets/bootstrap-select", file = "assets/bootstrap-select"),
     script = c("js/bootstrap-select.min.js"),
     stylesheet = c("css/bootstrap-select.min.css")
@@ -326,8 +326,8 @@ html_dependency_airdatepicker <- function() {
   htmlDependency(
     name = "air-datepicker",
     version = "2.2.3",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/air-datepicker2", file = "assets/air-datepicker2"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/air-datepicker2", file = "assets/air-datepicker2"),
     script = "datepicker.min.js",
     stylesheet = c("datepicker.min.css", "airdatepicker-custom.css")
   )
@@ -337,8 +337,8 @@ html_dependency_nouislider <- function() {
   htmlDependency(
     name = "nouislider",
     version = "11.0.3",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/nouislider", file = "assets/nouislider"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/nouislider", file = "assets/nouislider"),
     script = c("nouislider.min.js", "wNumb.js"),
     stylesheet = "nouislider.min.css"
   )
@@ -348,8 +348,8 @@ html_dependency_spectrum <- function() {
   htmlDependency(
     name = "spectrum",
     version = "1.8.1",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/spectrum", file = "assets/spectrum"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/spectrum", file = "assets/spectrum"),
     script = c("spectrum.min.js"),
     stylesheet = c("spectrum.min.css", "sw-spectrum.css")
   )
@@ -359,8 +359,8 @@ html_dependency_animate <- function() {
   htmlDependency(
     name = "animate",
     version = "3.5.2",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/animate", file = "assets/animate"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/animate", file = "assets/animate"),
     stylesheet = "animate.min.css"
   )
 }
@@ -369,8 +369,8 @@ html_dependency_knob <- function() {
   htmlDependency(
     name = "jquery-knob",
     version = "1.2.13",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/jquery-knob", file = "assets/jquery-knob"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/jquery-knob", file = "assets/jquery-knob"),
     script = c("jquery.knob.min.js")
   )
 }
@@ -379,8 +379,8 @@ html_dependency_multi <- function() {
   htmlDependency(
     name = "multi",
     version = "1.4.0",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/multi", file = "assets/multi"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/multi", file = "assets/multi"),
     script = "multi.min.js",
     stylesheet = c("multi.min.css")
   )
@@ -390,8 +390,8 @@ html_dependency_autonumeric <- function() {
   htmlDependency(
     name = "autonumeric",
     version = "4.6.0",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/autonumeric", file = "assets/autonumeric"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/autonumeric", file = "assets/autonumeric"),
     script = "autoNumeric.min.js"
   )
 }
@@ -400,7 +400,7 @@ html_dependency_polyfill_promise <- function() {
   htmlDependency(
     name = "promise-polyfill",
     version = "7.1.0",
-    src = c(href="shinyWidgets/sweetalert2", file = "assets/sweetalert2"),
+    src = c(href="shinyWidgetsCustom/sweetalert2", file = "assets/sweetalert2"),
     script = "js/promise.min.js"
   )
 }
@@ -409,8 +409,8 @@ html_dependency_bounty <- function() {
   htmlDependency(
     name = "bounty",
     version = "1.3.0",
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/bounty", file = "assets/bounty"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/bounty", file = "assets/bounty"),
     script = c("bounty.js", "bounty-wrapper.js")
   )
 }
@@ -420,8 +420,8 @@ html_dependency_stati <- function() {
   htmlDependency(
     name = "stati",
     version = packageVersion("shinyWidgets"),
-    package = "shinyWidgets",
-    src = c(href = "shinyWidgets/stati", file = "assets/stati"),
+    package = "shinyWidgetsCustom",
+    src = c(href = "shinyWidgetsCustom/stati", file = "assets/stati"),
     stylesheet = "stati.css"
   )
 }
@@ -431,8 +431,8 @@ html_dependency_pickr <- function() {
   htmlDependency(
     name = "pickr",
     version = "1.6.0",
-    src = list(href = "shinyWidgets/pickr-1.6.0", file = "assets/pickr-1.6.0"),
-    package = "shinyWidgets",
+    src = list(href = "shinyWidgetsCustom/pickr-1.6.0", file = "assets/pickr-1.6.0"),
+    package = "shinyWidgetsCustom",
     script = "js/pickr.min.js",
     stylesheet = c(
       "css/classic.min.css",
